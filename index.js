@@ -10,7 +10,7 @@ kvadr =() =>{
         kv.style.height=width + "px";
         SetPos(kv);
         kv.addEventListener("dblclick", del);
-        kv.addEventListener("click", clik);
+        kv.addEventListener('click', (event) =>{event.target.style.backgroundColor = 'rgb(255, 255, 0)'}) 
         outp.appendChild(kv);
     }
 }
@@ -26,7 +26,7 @@ Treu =() =>{
         tr.style.borderBottomWidth=width + "px";
         SetPos(tr);
         tr.addEventListener("dblclick", del);
-        tr.addEventListener("click", clik);
+        tr.addEventListener('click', (event) =>{event.target.style.borderBottomColor = 'rgb(255, 255, 0)'}) 
         outp.appendChild(tr);
     }
 }
@@ -42,7 +42,7 @@ Krug =() =>{
         kr.style.borderRadius=width/2 + "px";
         SetPos(kr);
         kr.addEventListener("dblclick", del);
-        kr.addEventListener("click", clik);
+        kr.addEventListener('click', (event) =>{event.target.style.backgroundColor = 'rgb(255, 255, 0)'}) 
         outp.appendChild(kr);
     }
 }
@@ -54,12 +54,6 @@ SetPos=(fig)=>{
     fig.style.top=top1 + "px";
 }
 
-clik=(event)=>{
-    if(event.target.className=="kvadr"||event.target.className=="krug")
-        event.target.style.background = '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase();
-    else 
-        event.target.style.borderBottomColor = '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase();
-}
 del=(event)=>{
     if(event.target.className=="kvadr"||event.target.className=="treug"||event.target.className=="krug")  
         event.target.style.display = "none";

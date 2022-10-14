@@ -1,7 +1,3 @@
-.treug:hover{
-    border-bottom-color: yellow;
-}
-
 .treug{
     position: absolute;
     opacity: .8;
@@ -10,20 +6,12 @@
     border-bottom: 0 solid blue;
 }
 
-.krug:hover{
-    background: yellow;
-}
-
 .krug{
     position: absolute;
 	background: green;
     border-radius: 50px;
     border: 1px solid black;
     opacity: .8;
-}
-
-.kvadr:hover{
-    background: yellow;
 }
 
 .kvadr{
@@ -36,4 +24,3 @@
 #out{
     position: absolute;
 }
-
